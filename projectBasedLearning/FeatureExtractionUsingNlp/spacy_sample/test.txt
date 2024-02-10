@@ -1,0 +1,22 @@
+create an offer with monthly recurring charge of 10$ for voice service.
+create an offer with monthly recurring charge of 10$ for voice service and onetime setup fee of 5$.
+create an offer with monthly recurring charge of 10$ for data service.
+create an offer with monthly recurring charge of 10$ for data service and onetime setup fee of 5$.
+create an offer with monthly recurring charge of 10$ for SMS service.
+create an offer with monthly recurring charge of 10$ for unlimited voice, data and SMS service.
+create an offer with monthly recurring charge of 10$ for unlimited voice, data, SMS service and onetime setup fee of 5$.
+create an offer with monthly recurring charge of 10$ for unlimited voice service.
+create an offer with monthly recurring charge of 10$ for unlimited data service.
+create an offer with monthly recurring charge of 10$ for unlimited SMS service.
+create an offer with monthly recurring charge of 10$ for 1 GB daily data service.
+create an offer with monthly recurring charge of 10$ for 60 minutes daily voice service.
+create an offer having unlimited voice anmobd 2 GB data download for monthly fee of 10$.
+create a voice service offer having peak hour rate of 1$ per minute and off peak rate of 0.5$ per minute
+create a data service offer having 1.5 GB daily limit after that 1$ per every MB of data consumed.
+create a monthly data plan having 1.5 GB daily limit with 24 days validity for a monthly fee of 45$ and unlimited voice calls and SMS.
+create OTT service plan having netflix and amazon prime subscription for monthly fee of 15$.
+create a yearly data plan with 365 days validity having 24GB data limit and unlimited voice call and SMS.
+create a yearly data plan with 365 days validity having 24GB data limit and unlimited voice call and 100 SMSs per day.
+create 300$ monthly plan with 2 GB per day data and Unlimited voice and 100 SMS per day.
+create 300$ monthly plan with 2 GB per day data and Unlimited voice and 100 SMS per day and OTT service having Amazon Prime and Netflix subscription.
+create an offer with unlimited data between 12 AM and 6 AM everyday.

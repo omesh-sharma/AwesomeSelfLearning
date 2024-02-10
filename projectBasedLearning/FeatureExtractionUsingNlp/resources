@@ -1,0 +1,296 @@
+https://www.shiksha.com/online-courses/articles/extracting-information-from-text-data-using-spacy-in-nlp/
+https://github.com/SrishtiVashishtha/Text-Based-Feature-Extraction-using-Python
+https://www.pluralsight.com/guides/building-features-from-text-data
+Spacy trained and add the new field
+https://towardsdatascience.com/custom-named-entity-recognition-using-spacy-7140ebbb3718
+
+
+https://nexocode.com/blog/posts/natural-language-processing-in-the-telecommunications-industry/
+
+
+
+https://github.com/cohere-ai/notebooks/blob/main/notebooks/Entity_Extrcation_with_Generative_Language_Models.ipynb
+
+check linkedin profile for the coherence : 
+Paul Parkinson 
+https://www.linkedin.com/feed/update/urn:li:activity:7084629648625524737/
+
+https://www.oracle.com/artificial-intelligence/generative-ai/
+
+
+Simple train daat with spacy : (FInal used for training , format used is keptin hardcoded train opython source file)
+https://towardsdatascience.com/train-ner-with-custom-training-data-using-spacy-525ce748fab7  
+
+https://manivannan-ai.medium.com/how-to-train-ner-with-custom-training-data-using-spacy-188e0e508c6
+
+https://docs.cohere.com/docs/entity-extraction
+
+ # rephrace : 
+ https://analyticsindiamag.com/how-to-paraphrase-text-using-pegasus-transformer/
+
+ # Automate label creation : 
+ https://medium.com/@pasdan/programmatically-create-named-entity-recognition-ner-datasets-6cfee81fb814
+
+ # automatic regex creator : 
+ https://regex-generator.olafneumann.org/?sampleText=2020-03-12T13%3A34%3A56.123Z%20INFO%20%20%5Borg.example.Class%5D%3A%20This%20is%20a%20%23simple%20%23logline%20containing%20a%20%27value%27.&flags=Pi&selection=20%7CExact%20number,52%7CCombination%20%5BMultiple%20characters%20%2B%20Character%5D
+
+
+# training spacy with lable positioning
+ https://towardsdatascience.com/extend-named-entity-recogniser-ner-to-label-new-entities-with-spacy-339ee5979044
+
+# also given thirdpa rty data looks like adn hoe to conver tin target data.  [Final using nexdt fmoat to trani the data]
+https://newscatcherapi.com/blog/train-custom-named-entity-recognition-ner-model-with-spacy-v3
+
+ # Produgy docs : to train data from the UI : 
+ # from the same above link we can calso train the coputer vision and all other data.
+ https://prodi.gy/docs
+
+
+# Also we can use other tool :
+Spacy-Label-Studio
+
+ # Lable setdio used by the datascience to make the training data : 
+ https://github.com/heartexlabs/label-studio
+
+, you can use one of the following data annotation tools to create your own:
+Doccano
+Tagtog
+LightTag
+Prodigy
+
+
+# Labelling and annotation using 
+https://github.com/doccano/doccano  {using dacono installtion and docs}
+https://doccano.herokuapp.com/
+
+** issued i faced during installtiopno f docanno : djangorestframework : uninstall and isntall using python -m install , drf-yasg related uninstall and install the same with python -m pip install drf-yasg
+
+some time spacy isue while training the data L in that case uninstall spacy and install again using the python -m 
+
+ # approach 
+ - Data set creation 
+ - use rephrase on existing data  make sure to match the format
+ - number and character to words
+ - setup and install prodigy
+ - check how to train with prodgy and use trained file
+ - train teh file and see the result
+ - search for the prepaid plan in the telco
+
+
+
+
+ # require : 
+ pip install spacy-transformers
+
+
+ # resukt : 
+
+ Entities [('offer', 'OFFER'), ('monthly', 'OFFER'), ('10$', 'MONEY'), ('voice', 'OFFER')]
+tokens: [('create', 0, 2), ('an', 0, 2), ('offer', 3722501548579841786, 3), ('with', 0, 2), ('monthly', 3722501548579841786, 3), ('recurring', 0, 2), ('charge', 0, 2), ('of', 0, 2), ('10', 394, 3), ('$', 394, 1), ('for', 0, 2), ('voice', 3722501548579841786, 3), ('service', 0, 2), ('.', 0, 2)]
+offer OFFER
+monthly OFFER
+10$ MONEY
+voice OFFER
+
+
+
+
+
+
+# Prepaid plans in india : 
+https://selectra.in/mobile/compare/cheapest-prepaid-and-data-plans-in-india
+https://www.kaggle.com/datasets/abdulaziz04/vi-and-airtel-prepaid-plans-dataset
+
+
+# churn data set
+
+https://www.kaggle.com/datasets/spscientist/telecom-data
+https://data.world/datasets/telecommunications
+https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/EGZHFV
+
+# Todo : 
+check and upate code :
+
+https://www.kaggle.com/code/kiruthigaa/ner-model-train-test-using-spacy-label-studio
+
+# create syntehtic data in python and chatgpt : 
+https://programmaticponderings.com/2023/04/18/unlocking-the-potential-of-generative-ai-for-synthetic-data-generation/#:~:text=Generative%20AI%20can%20generate%20synthetic,data%20for%20machine%20learning%20models.
+
+# Faker library python
+https://www.datacamp.com/tutorial/creating-synthetic-data-with-python-faker-tutorial
+
+
+# for the fuzzy Ner model.
+IN case you want to correct the user entered string in your format and better for the post processing:
+
+https://towardsdatascience.com/natural-language-processing-for-fuzzy-string-matching-with-python-6632b7824c49
+
+They have used the Fuzzywuzzy library in the python
+
+
+ # telco prepaid plans : 
+
+ Telco prepaid plans
+ChatGPT
+Sure! Here are some examples of prepaid plans offered by telecommunications companies (telcos). Please note that these plans may vary depending on your location and the specific telco:
+AT&T (United States):
+Prepaid Monthly Plans: These plans offer unlimited talk, text, and data with various data speed options.
+Pay-As-You-Go: Allows you to pay for minutes, texts, and data as you use them.
+Vodafone (Global):
+Vodafone Pay As You Go: Offers flexible rates for calls, texts, and data with the option to choose from various bundles.
+Combo Prepaid: Provides a combination of minutes, texts, and data in a single bundle.
+Airtel (India):
+
+Airtel Smart Recharge: Offers a prepaid plan with a fixed validity period and a combination of talk time, data, and SMS benefits.
+Airtel Unlimited Packs: Provides unlimited calls, daily data allowance, and SMS benefits for a fixed duration.
+Optus (Australia):
+Prepaid Epic Data: Offers a range of prepaid plans with different data allowances, unlimited standard national calls and texts, and additional features like data rollover and entertainment bonuses.
+Prepaid Long Expiry: Provides a longer validity period for your prepaid credit, with the flexibility to recharge as needed.
+Globe Telecom (Philippines):
+GoSakto: Allows you to customize your own prepaid plan by choosing the amount of data, calls, and texts that suit your needs.
+GoUNLI: Offers unlimited calls, texts, and data for a fixed duration.
+EE (United Kingdom):
+Pay As You Go: Offers various packs with different allowances for minutes, texts, and data.
+Everything Pack: Provides unlimited minutes and texts with a fixed data allowance.
+Remember to check with your local telco provider for the most up-to-date and accurate information on their prepaid plans. The plans may change over time, and different telcos may have different offerings.
+
+
+
+
+
+Python code to create synthetic data based on mentioned example
+
+
+
+
+
+# Process for creation of nlp custom ner and all
+- First created sample text with harcoded substring in the spacy foromat suported
+- then trained the custom model.
+- I Used docanno to create manual data substring with labels.
+- Then i create syntehtic data based on the understading and random combination to string to create plans and all.
+- After that i combine all data set and make script to create data set synteic based on entereed daat set required.
+- Then i TRain the model.
+- After created UI and dsiplay result from that
+
+
+# Meeting with chintan , september 3 2023 
+- Chintan will share the further well prepare excel sheet with more fine tune data. On the top of that i have to create well written data set.
+- Look for LAMA by facebook,  https://research.facebook.com/publications/llama-open-and-efficient-foundation-language-models/
+- Look for BERT model, we can use this one to train NER as alternate of the spacy
+
+
+
+
+[Side project]
+Nlp PDC project : naming convention correction , acccurate and train model , continue model work , chintan code intergation and see the flowfeature exraction : fine tune the model more in detail
+
+Pybrm
+
+[MS]
+imimsta data result date should be replace with the age
+https://bug.oraclecorp.com/pls/bug/webbug_edit.edit_info_top?rptno=32223793  (1 SR since 3 years, the other since 1 year)
+
+As i already have worked on imsimta qm sum -oldest part so last 2nd enh is related to that.
+
+Email thread Fyi :
+SR 3-31403274651 - CorpEmail: imsimta qm sum -data and -oldest questions/comments/KM suggestions
+
+
+[BRM]
+Brm flow creation from the debug,
+create the customisation in the BRm and play around
+BRM telenor and telco customer bug solving check goals
+
+Ian note : But what is their concern about "stable"? You can't have "balanced" and "stable" ... one or the other. In order to restore balance after any recovery of an EMGW you must have some "instability"... so you can control how much "stability" you have by modifying the refresh_interval.
+It would be good to raise a documentation bug as well as part of the closure of this so that customers are aware of the behaviour.
+Well spotted... this sort of things happens with code like this ... really, there should be a single function that returns a qualified list of host/port candidates to this logic... then it could just iterate the list...
+Needs refactoring.
+Make slack apprciation screenshot
+
+
+Top priority ::    Buildah repalcement with docker in the BRM : search e mai heading  email sent my himashu for this  "BRM Improvements"
+
+Regarding PCP and SSL code refactoring and fixes  : check mail from HImanshu , ian anirudh
+                Code addition to git
+                Regular rebase based on the changes and build + compile the code.
+                Final impact changes
+                No code overriden
+                Same integration changes in 15.1 , 1st we did in ps8, then drop and plan in 15.0 then drop and plan in 15.1
+                BUg creation  : ask anirudhaa regarding that.
+                CNE deployement
+                Compilation
+                bats
+                OKE -> autoscaling
+                emgw / eiajs LOAD TESTING
+                
+                HA config testing
+                SSL handshake
+                    EMGW
+                    15.0 branch setup and intergration the same changes there first, then move to ps7 the same changes (for 15.o have to be carefull as ssl changes are already been integrated there , so have to verify that)
+                    private cloud  backup
+                    we are delivering in ps1 from 15.0 as anirudhaa said.
+
+                New finding on freeze or pause the one of the eaijs
+
+             For 15.0, SSL is supported in Pipeline so some of the changes will be different
+             Dropping connections in the middle of transactions when refresh_interval
+
+             Ian note : need to raise the seperate bug on this:
+              P.S. I noticed whilst testing failures of discounting that all things failover without particular trouble now… but if you try and STOP the IFW it causes a lot of trouble as it appears to shutdown it’s pipelines before dropping connectivity… so you get lots of PIN_ERR_BAD_OPCODE and failures as a result…. Effectively, we can’t do a clean scale down of RTP currently… best to just kill -9… I will raise a bug about this…
+
+             Testing adn debug
+                HA configuration support confirmation
+                Keep logs and result of qijs load and all, make a doucment on how we test and validate the strategy
+                Making sure EM connections (EAI_JS in particular) do an SSH handshake on reconnect… they were currently reconnecting, but then failing as SSH was not initialized.
+                Refresh interval in eijs should not be disconnect the running transaction
+                Avoid the connection retries counter being reset
+                Make sure in normal configuration connection should be balanced.
+                Make sure that if pcp_conn_try_this fails the ebuf is reset (rather than in the loop for pcp_connect) so that a successful connect to another server does not return error
+                CNE anv setup and validation
+
+         There is a JIRA opened for 15.1 for the EM GW HA requirement
+          https://gbujira.oraclecorp.com/browse/OMS-27238
+
+           pcp ssl : https://bug.oraclecorp.com/pls/bug/webbug_edit.edit_info_top?rptno=35789030
+          cm2em : https://bug.oraclecorp.com/pls/bug/webbug_edit.edit_info_top?rptno=35789491    
+          clean pcp logs : https://bug.oraclecorp.com/pls/bug/webbug_edit.edit_info_top?rptno=35790012     
+         pcp restructuring: https://bug.oraclecorp.com/pls/bug/webbug_edit.edit_info_top?rptno=35790080&rptno_count=1&pos=1&report_title=&query_id=-1
+          HA configuration : https://bug.oraclecorp.com/pls/bug/webbug_edit.edit_info_top?rptno=35790152&rptno_count=1&pos=1&report_title=&query_id=-1
+
+          Creation of the confuenc page
+          share HA work email
+          Send slack mesage to anidhaa on the next testing or action plan
+
+
+save all workspace notes
+privaet cloud back, helchart bak , cvmois 
+
+check on pybrm
+https://pypi.org/project/pybrm/
+
+on prem setup automation  651 phinix, anirudha box 
+eaijs testing and verification
+then code rebase then builkd and retest planning
+buildah , and new proxy settgn shared by keol
+15.1 ian changes panning 
+
+POrting bug assigbed by himanshu : 35565951
+
+Complete the mandate trainnig before octover
+
+cloud sertification exam on time 
+
+
+stocks and goals
+
+ai and ml training
+
+Check for the minutes of meeting in the BRm notes : 
+ Minutes of  meeting with himanshu 2023 september 7 
+
+create Goals
+
+create a slack group fro the BRM communication 
+
+buildah update and make usage  andpoc how all doen guide nad better ppt
