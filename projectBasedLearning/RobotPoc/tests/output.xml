@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.6.8 on linux)" generated="20220526 11:49:21.815" rpa="false" schemaversion="3">
+<suite id="s1" name="Tests" source="/home/omesharm/OracleDev/POC/RobotPoc/tests">
+<suite id="s1-s1" name="Gherkin Login" source="/home/omesharm/OracleDev/POC/RobotPoc/tests/gherkin_login.robot">
+<test id="s1-s1-t1" name="Valid Login" line="10">
+<kw name="Given browser is opened to login page">
+<kw name="Open Browser To Login Page" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220526 11:49:22.015" level="INFO">Opening browser 'Firefox' to base url '&lt;a href="http://"&gt;http://&lt;/a&gt;localhost:7272/'.</msg>
+<msg timestamp="20220526 11:49:22.015" level="INFO">Firefox driver log is always forced to to: /home/omesharm/OracleDev/POC/RobotPoc/tests/geckodriver-1.log</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220526 11:49:26.475" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220526 11:49:26.424" endtime="20220526 11:49:26.475"/>
+</kw>
+<msg timestamp="20220526 11:49:26.477" level="FAIL">InvalidArgumentException: Message: Malformed URL: URL constructor: &lt;a href="http://"&gt;http://&lt;/a&gt;localhost:7272/ is not a valid URL.
+</msg>
+<status status="FAIL" starttime="20220526 11:49:22.014" endtime="20220526 11:49:26.478"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20220526 11:49:26.480" endtime="20220526 11:49:26.480"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="NOT RUN" starttime="20220526 11:49:26.480" endtime="20220526 11:49:26.480"/>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<status status="NOT RUN" starttime="20220526 11:49:26.480" endtime="20220526 11:49:26.480"/>
+</kw>
+<status status="FAIL" starttime="20220526 11:49:22.013" endtime="20220526 11:49:26.481"/>
+</kw>
+<status status="FAIL" starttime="20220526 11:49:22.013" endtime="20220526 11:49:26.482"/>
+</kw>
+<kw name="When user &quot;demo&quot; logs in with password &quot;mode&quot;" sourcename="User &quot;${username}&quot; logs in with password &quot;${password}&quot;">
+<status status="NOT RUN" starttime="20220526 11:49:26.483" endtime="20220526 11:49:26.483"/>
+</kw>
+<kw name="Then welcome page should be open" library="resource">
+<status status="NOT RUN" starttime="20220526 11:49:26.483" endtime="20220526 11:49:26.483"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220526 11:49:26.484" endtime="20220526 11:49:27.233"/>
+</kw>
+<status status="FAIL" starttime="20220526 11:49:22.011" endtime="20220526 11:49:27.233">InvalidArgumentException: Message: Malformed URL: URL constructor: &lt;a href="http://"&gt;http://&lt;/a&gt;localhost:7272/ is not a valid URL.
+</status>
+</test>
+<doc>A test suite with a single Gherkin style test.
+
+This test is functionally identical to the example in
+valid_login.robot file.</doc>
+<status status="FAIL" starttime="20220526 11:49:21.843" endtime="20220526 11:49:27.234"/>
+</suite>
+<suite id="s1-s2" name="Invalid Login" source="/home/omesharm/OracleDev/POC/RobotPoc/tests/invalid_login.robot">
+<kw name="Open Browser To Login Page" library="resource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220526 11:49:27.242" level="INFO">Opening browser 'Firefox' to base url '&lt;a href="http://"&gt;http://&lt;/a&gt;localhost:7272/'.</msg>
+<msg timestamp="20220526 11:49:27.243" level="INFO">Firefox driver log is always forced to to: /home/omesharm/OracleDev/POC/RobotPoc/tests/geckodriver-2.log</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220526 11:49:31.950" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220526 11:49:31.892" endtime="20220526 11:49:31.950"/>
+</kw>
+<msg timestamp="20220526 11:49:31.951" level="FAIL">InvalidArgumentException: Message: Malformed URL: URL constructor: &lt;a href="http://"&gt;http://&lt;/a&gt;localhost:7272/ is not a valid URL.
+</msg>
+<status status="FAIL" starttime="20220526 11:49:27.241" endtime="20220526 11:49:31.951"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20220526 11:49:31.952" endtime="20220526 11:49:31.952"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="NOT RUN" starttime="20220526 11:49:31.952" endtime="20220526 11:49:31.952"/>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<status status="NOT RUN" starttime="20220526 11:49:31.952" endtime="20220526 11:49:31.952"/>
+</kw>
+<status status="FAIL" starttime="20220526 11:49:27.241" endtime="20220526 11:49:31.953"/>
+</kw>
+<test id="s1-s2-t1" name="Invalid Username" line="17">
+<status status="FAIL" starttime="20220526 11:49:31.953" endtime="20220526 11:49:31.954">Parent suite setup failed:
+InvalidArgumentException: Message: Malformed URL: URL constructor: &lt;a href="http://"&gt;http://&lt;/a&gt;localhost:7272/ is not a valid URL.
+</status>
+</test>
+<test id="s1-s2-t2" name="Invalid Password" line="18">
+<status status="FAIL" starttime="20220526 11:49:31.955" endtime="20220526 11:49:31.956">Parent suite setup failed:
+InvalidArgumentException: Message: Malformed URL: URL constructor: &lt;a href="http://"&gt;http://&lt;/a&gt;localhost:7272/ is not a valid URL.
+</status>
+</test>
+<test id="s1-s2-t3" name="Invalid Username And Password" line="19">
+<status status="FAIL" starttime="20220526 11:49:31.956" endtime="20220526 11:49:31.957">Parent suite setup failed:
+InvalidArgumentException: Message: Malformed URL: URL constructor: &lt;a href="http://"&gt;http://&lt;/a&gt;localhost:7272/ is not a valid URL.
+</status>
+</test>
+<test id="s1-s2-t4" name="Empty Username" line="20">
+<status status="FAIL" starttime="20220526 11:49:31.958" endtime="20220526 11:49:31.958">Parent suite setup failed:
+InvalidArgumentException: Message: Malformed URL: URL constructor: &lt;a href="http://"&gt;http://&lt;/a&gt;localhost:7272/ is not a valid URL.
+</status>
+</test>
+<test id="s1-s2-t5" name="Empty Password" line="21">
+<status status="FAIL" starttime="20220526 11:49:31.959" endtime="20220526 11:49:31.960">Parent suite setup failed:
+InvalidArgumentException: Message: Malformed URL: URL constructor: &lt;a href="http://"&gt;http://&lt;/a&gt;localhost:7272/ is not a valid URL.
+</status>
+</test>
+<test id="s1-s2-t6" name="Empty Username And Password" line="22">
+<status status="FAIL" starttime="20220526 11:49:31.961" endtime="20220526 11:49:31.962">Parent suite setup failed:
+InvalidArgumentException: Message: Malformed URL: URL constructor: &lt;a href="http://"&gt;http://&lt;/a&gt;localhost:7272/ is not a valid URL.
+</status>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220526 11:49:31.962" endtime="20220526 11:49:32.619"/>
+</kw>
+<doc>A test suite containing tests related to invalid login.
+
+These tests are data-driven by their nature. They use a single
+keyword, specified with Test Template setting, that is called
+with different arguments to cover different scenarios.
+
+This suite also demonstrates using setups and teardowns in
+different levels.</doc>
+<status status="FAIL" starttime="20220526 11:49:27.236" endtime="20220526 11:49:32.619">Suite setup failed:
+InvalidArgumentException: Message: Malformed URL: URL constructor: &lt;a href="http://"&gt;http://&lt;/a&gt;localhost:7272/ is not a valid URL.
+</status>
+</suite>
+<suite id="s1-s3" name="Valid Login" source="/home/omesharm/OracleDev/POC/RobotPoc/tests/valid_login.robot">
+<test id="s1-s3-t1" name="Valid Login" line="9">
+<kw name="Open Browser To Login Page" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220526 11:49:32.626" level="INFO">Opening browser 'Firefox' to base url '&lt;a href="http://"&gt;http://&lt;/a&gt;localhost:7272/'.</msg>
+<msg timestamp="20220526 11:49:32.627" level="INFO">Firefox driver log is always forced to to: /home/omesharm/OracleDev/POC/RobotPoc/tests/geckodriver-3.log</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220526 11:49:37.172" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220526 11:49:37.121" endtime="20220526 11:49:37.172"/>
+</kw>
+<msg timestamp="20220526 11:49:37.173" level="FAIL">InvalidArgumentException: Message: Malformed URL: URL constructor: &lt;a href="http://"&gt;http://&lt;/a&gt;localhost:7272/ is not a valid URL.
+</msg>
+<status status="FAIL" starttime="20220526 11:49:32.626" endtime="20220526 11:49:37.173"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20220526 11:49:37.173" endtime="20220526 11:49:37.173"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="NOT RUN" starttime="20220526 11:49:37.174" endtime="20220526 11:49:37.174"/>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<status status="NOT RUN" starttime="20220526 11:49:37.174" endtime="20220526 11:49:37.174"/>
+</kw>
+<status status="FAIL" starttime="20220526 11:49:32.625" endtime="20220526 11:49:37.174"/>
+</kw>
+<kw name="Input Username" library="resource">
+<arg>demo</arg>
+<status status="NOT RUN" starttime="20220526 11:49:37.175" endtime="20220526 11:49:37.175"/>
+</kw>
+<kw name="Input Password" library="resource">
+<arg>mode</arg>
+<status status="NOT RUN" starttime="20220526 11:49:37.175" endtime="20220526 11:49:37.175"/>
+</kw>
+<kw name="Submit Credentials" library="resource">
+<status status="NOT RUN" starttime="20220526 11:49:37.175" endtime="20220526 11:49:37.176"/>
+</kw>
+<kw name="Welcome Page Should Be Open" library="resource">
+<status status="NOT RUN" starttime="20220526 11:49:37.176" endtime="20220526 11:49:37.176"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220526 11:49:37.177" endtime="20220526 11:49:37.826"/>
+</kw>
+<status status="FAIL" starttime="20220526 11:49:32.624" endtime="20220526 11:49:37.826">InvalidArgumentException: Message: Malformed URL: URL constructor: &lt;a href="http://"&gt;http://&lt;/a&gt;localhost:7272/ is not a valid URL.
+</status>
+</test>
+<doc>A test suite with a single test for valid login.
+
+This test has a workflow that is created using keywords in
+the imported resource file.</doc>
+<status status="FAIL" starttime="20220526 11:49:32.620" endtime="20220526 11:49:37.827"/>
+</suite>
+<status status="FAIL" starttime="20220526 11:49:21.817" endtime="20220526 11:49:37.829"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="8" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="8" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Gherkin Login">Tests.Gherkin Login</stat>
+<stat pass="0" fail="6" skip="0" id="s1-s2" name="Invalid Login">Tests.Invalid Login</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s3" name="Valid Login">Tests.Valid Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

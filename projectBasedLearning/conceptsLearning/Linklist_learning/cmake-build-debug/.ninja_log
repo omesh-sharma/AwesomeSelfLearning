@@ -1,0 +1,15 @@
+# ninja log v5
+0	99	7035049957080461	CMakeFiles/Linklist_learning.dir/linklist_all_operation.cpp.obj	7b06a3014da33d23
+70	176	7047409612353691	Linklist_learning.exe	a77f153dcf5e05fb
+22	216	7047512344811286	build.ninja	c7b3a16da465c476
+2	69	7047409611436486	CMakeFiles/Linklist_learning.dir/test.cpp.obj	119a7ed45f5f1d03
+2	234	7047933463623023	CMakeFiles/Linklist_learning.dir/test.cpp.obj	119a7ed45f5f1d03
+235	381	7047933464857703	Linklist_learning.exe	a77f153dcf5e05fb
+1	73	7047933777716843	CMakeFiles/Linklist_learning.dir/test.cpp.obj	119a7ed45f5f1d03
+74	188	7047933778752744	Linklist_learning.exe	a77f153dcf5e05fb
+1	79	7047935271857829	CMakeFiles/Linklist_learning.dir/test.cpp.obj	119a7ed45f5f1d03
+80	207	7047935272973871	Linklist_learning.exe	a77f153dcf5e05fb
+1	1021	7048264056816753	CMakeFiles/Linklist_learning.dir/test.cpp.obj	119a7ed45f5f1d03
+1023	1363	7048264058000523	Linklist_learning.exe	a77f153dcf5e05fb
+2	893	7048281205138741	CMakeFiles/Linklist_learning.dir/test.cpp.obj	119a7ed45f5f1d03
+894	1014	7048281206192169	Linklist_learning.exe	a77f153dcf5e05fb

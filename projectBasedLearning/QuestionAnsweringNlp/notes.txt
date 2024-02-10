@@ -1,0 +1,11 @@
+Custom  training question answering model in BERT :
+
+https://www.youtube.com/watch?v=3XiJrn_8F9Q	
+
+https://github.com/krishnaik06/Trnasformer-Bert
+	https://simpletransformers.ai/docs/qa-specifics/
+	https://github.com/ThilinaRajapakse/simpletransformers
+
+https://ashokpalivela.medium.com/question-answering-system-nlp-project-intermediate-46192a240799
+
+https://github.com/huggingface/transformers

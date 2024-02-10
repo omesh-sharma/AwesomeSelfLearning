@@ -1,0 +1,8 @@
+# ninja log v5
+1	180	6971141816338352	build.ninja	e5f44ad00d045ec9
+0	129	6874541165050360	CMakeFiles/untitled.dir/main.cpp.obj	bd4524f24c8ebccc
+1	94	6908068340661357	CMakeFiles/untitled.dir/testVardiac.cpp.obj	1216d9cc4852b647
+75	179	6971093799227400	untitled.exe	d3299039e447326c
+2	74	6971093798326293	CMakeFiles/untitled.dir/testVardiac.c.obj	e9ab8a6cc7de4b82
+3	266	6973651644911985	CMakeFiles/untitled.dir/testVardiac.c.obj	e9ab8a6cc7de4b82
+266	478	6973651646828053	untitled.exe	d3299039e447326c

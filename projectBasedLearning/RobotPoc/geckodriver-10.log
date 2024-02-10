@@ -1,0 +1,14 @@
+1653545545017	geckodriver	INFO	Listening on 127.0.0.1:51071
+1653545545099	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofileq2L4pi"
+1653545546269	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileq2L4pi/search.json.mozlz4", (void 0)))
+1653545549406	Marionette	INFO	Listening on port 33575
+1653545549471	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1653545549865	Marionette	INFO	Stopped listening on port 33575
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1F0011,name=PBackgroundStorage::Msg_Observe) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x1F0011,name=PBackgroundStorage::Msg_Observe) Channel error: cannot send/recv
+

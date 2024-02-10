@@ -1,0 +1,251 @@
+
+    
+<html lang="en">
+
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+
+<!-- Reference  https://codepen.io/Neervasant/pen/abGMLPg-->
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap');
+:root {
+  --header-height: 53px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Segoe UI, SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent; /*for removing the blue color layer when clicked on mobile devices*/
+    word-break: break-word;
+}
+header {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 250;
+  height: var(--header-height);
+}
+.header {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-height);
+}
+.header .logo {
+  font-family: 'Comforter Brush', cursive;
+padding-left: 40px;
+  font-size:38px;
+}
+.header .menu .drawer {
+  display: flex;
+  height: var(--header-height);
+  padding-right: 100px;
+}
+.header .menu .drawer a {
+  text-transform: capitalize;
+  transition: all 0.1s linear;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  color: #585b63;
+  font-size: 17.4px;
+}
+.header .menu .drawer a:hover {
+  background: #f3f3f3;
+}
+.header .menu .drawer a:active {
+  background: #e0e0e0;
+}
+.menu-btn,
+.close-btn {
+  background: transparent;
+  border: none;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  position: absolute;
+  left: 11px;
+  top: 8px;
+  display: none;
+  cursor: pointer;
+}
+.menu-btn {
+  left: 3px;
+}
+.close-btn:active,
+.menu-btn:active {
+  background: #f3f3f3;
+}
+.img{
+ height:calc(100vh - 53px);
+ width:100%;
+  object-fit:cover;
+  display:block;
+}
+@media (max-width: 1140px) {
+  .header .menu .drawer {
+    padding: 0;
+  }
+}
+.body {
+  overflow: hidden;
+}
+@media (max-width: 920px) {
+  .header .menu {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: -925px;
+    width: 100%;
+    height: 100%;
+    z-index: 300;
+  }
+  .header .menu .blank {
+    height: 100%;
+    flex: 1;
+  }
+  .header .menu .drawer {
+    box-shadow: 2px 0 12px rgb(0 0 0 / 40%);
+    padding-top: 50px;
+    height: 100%;
+    width: 225px;
+    background: #fff;
+    flex-direction: column;
+    position: fixed;
+    left: -240px;
+    transition: all 200ms linear;
+    overflow: auto;
+  }
+  .header .menu .drawer a {
+    padding: 20px;
+  }
+  .menu-btn,
+  .close-btn {
+    display: block;
+  }
+  .header .logo {
+    margin-left: 17px;
+  }
+  .drawer-visible {
+    left: 0 !important;
+  }
+  .blur {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(15px);
+    left: 0 !important;
+  }
+}
+
+.btn-group-master-master .button {
+  background-color: rgb(238 238 238); /* #4CAF50; */ /* Green */
+  border: 1px solid green;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  float: left;
+}
+
+.btn-group-master-master .button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+.btn-group-master-master .button:hover {
+  background-color: #04AA6D;
+}
+
+</style>
+
+<body>
+
+<!-- Please change the pen width to see the sidebar -->
+<header>
+      <div class="header">
+        <button class="menu-btn" aria-label="Open Menu">
+          <svg
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="https://www.w3.org/2000/svg"
+            aria-label="Open Menu"
+            role="img"
+          >
+            <path d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+          </svg>
+        </button>
+        <!-- <div class="logo">User : Conny</div> -->
+        <nav class="menu">
+          <div class="drawer">
+            <button class="close-btn" aria-label="Close Menu">
+              <svg
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="https://www.w3.org/2000/svg"
+                aria-label="Close Menu"
+                role="img"
+              >
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                ></path>
+              </svg>
+            </button>
+<!--            <a href="#">Home</a>-->
+<!--            <a href="#services">Services</a>-->
+<!--            <a href="#gallery">Gallery</a>-->
+<!--            <a href="#about">About</a>-->
+<!--            <a href="#contact">Contact</a>-->
+              <div class="btn-group-master-master">
+                <!-- <button class="button" onclick="refresh();">Home</button> -->
+                <button class="button"  onclick="createAllAppSeries('master_view');">Go To All App Series</button>
+                <button class="button"  onclick="createApp1Series('master_view');">Go To APP 1 Series</button>
+                <button class="button"  onclick="createApp1('master_view');">Go To APP 1</button>
+                <button class="button" onclick="createApp1_a('master_view');">Go To App 1 (a)</button>
+                
+                <button class="button" onclick="createApp1_b('master_view');">Go To App 1 (b)</button>
+                
+              <button class="button" onclick="createApp2Series('master_view');">Go To App 2 Series</button>
+              <button class="button" onclick="createApp2('master_view');">Go To App 2</button>
+              <button class="button" onclick="createApp2_a('master_view');">Go To App 2 (a)</button>
+              <button class="button" onclick="createApp2_b('master_view');">Go To App 2 (b)</button>
+              <button class="button" onclick="createApp3Series('master_view');">Go To App 3 Series</button>
+              <button class="button" onclick="createApp3('master_view');">Go To App 3</button>
+              <button class="button" onclick="createApp3_a('master_view');">Go To App 3 (a)</button>
+              <button class="button" onclick="createApp3_b('master_view');">Go To App 3 (b)</button>
+              <button class="button" onclick="createApp4Series('master_view');">Go To App 4 Series</button>
+              <button class="button" onclick="createApp4('master_view');">Go To App 4</button>
+              
+<!--              <button class="button">About</button>-->
+<!--              <button class="button">Contact</button>-->
+            </div>
+          </div>
+          <div class="blank"></div>
+        </nav>
+      </div>
+    </header>
+
+<div id="master_view">
+
+
+
+</div>
+
+<script type="text/javascript" src="../src/services.js"></script>
+<script type="text/javascript" src="../src/master_app.js"></script>
+
+
+</body>
+</html>
+    

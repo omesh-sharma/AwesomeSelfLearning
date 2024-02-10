@@ -1,0 +1,8 @@
+1653544755835	geckodriver	INFO	Listening on 127.0.0.1:52235
+1653544755954	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-no-remote" "-profile" "/tmp/rust_mozprofileqL0ocY"
+1653544758364	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileqL0ocY/search.json.mozlz4", (void 0)))
+1653544761470	Marionette	INFO	Listening on port 37771
+1653544761565	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1653544761704	Marionette	INFO	Stopped listening on port 37771
+JavaScript error: resource:///modules/Interactions.jsm, line 209: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]

@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "RemoteDevelopmentClion_",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "RemoteDevelopmentClion_::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-RemoteDevelopmentClion_-Debug-0ae06f5cf1e40c20b2c2.json",
+					"name" : "RemoteDevelopmentClion_",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/omesharm/OracleDev/POC/RemoteDevelopmentClion /cmake-build-debug",
+		"source" : "/home/omesharm/OracleDev/POC/RemoteDevelopmentClion "
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

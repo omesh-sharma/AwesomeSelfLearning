@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="omesh machine ucs rahul (5bed5392-da82-4197-9c50-59e13a78bcf4)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/tmp/tmp.kntJeAntXU" local="$PROJECT_DIR$" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug-omesh-machine-ucs-rahul" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>
