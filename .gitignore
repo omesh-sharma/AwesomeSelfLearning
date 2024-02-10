@@ -1,0 +1,43 @@
+# Ignore all image files
+# *.png
+# *.jpg
+# *.jpeg
+# *.tif
+# *.tiff
+
+# Ignore __pycache__ folder
+__pycache__/
+
+# Ignore all images in subdirectories
+# **/*.png
+# **/*.jpg
+# **/*.jpeg
+# **/*.gif
+# **/*.bmp
+# **/*.svg
+# **/*.ico
+
+# **/*.zip
+# *.zip
+
+# **/*.hocr
+# **/results/
+# **/Depends/
+# **/_check/
+
+# Ignore __pycache__ in subdirectories
+**/__pycache__/
+
+**/localCache/
+
+**/.git/
+
+**/.bin/
+**/.build/
+
+**/.node_modules/
+
+**/ner_dataset.csv
+ner_dataset.csv
+ner.csv
+**/ner.csv
