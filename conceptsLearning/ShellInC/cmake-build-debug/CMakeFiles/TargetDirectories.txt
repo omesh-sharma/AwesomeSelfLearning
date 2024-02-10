@@ -1,0 +1,3 @@
+C:/Users/omesh sharma/omesh_backup/Workspace/Others/Projects/ProjectBasedLearning/ShellInC/cmake-build-debug/CMakeFiles/untitled1.dir
+C:/Users/omesh sharma/omesh_backup/Workspace/Others/Projects/ProjectBasedLearning/ShellInC/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/omesh sharma/omesh_backup/Workspace/Others/Projects/ProjectBasedLearning/ShellInC/cmake-build-debug/CMakeFiles/rebuild_cache.dir

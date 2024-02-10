@@ -1,0 +1,37 @@
+#include <map>
+#include <functional>
+#include <iostream>
+
+enum class Enum1
+{
+    a, b, c
+};
+
+enum class Enum2
+{
+    one, two, three
+};
+
+int main()
+{
+    auto const func1 = [] { std::cout << "func1\n"; };
+    auto const func2 = [] { std::cout << "func2\n"; };
+    auto const func3 = [] { std::cout << "func3\n"; };
+    auto const func4 = [] { std::cout << "func4\n"; };
+    auto const default_func = [] { std::cout << "default\n"; };
+
+    std::map<std::pair<Enum1, Enum2>, std::function<void()>> const actions =
+    {
+        {{ Enum1::a, Enum2::one }, func1 },
+        {{ Enum1::b, Enum2::one }, func2 },
+        {{ Enum1::a, Enum2::two }, func3 },
+        {{ Enum1::b, Enum2::two }, func4 }
+    };
+
+    auto const val1 = Enum1::a;
+    auto const val2 = Enum2::two;
+
+    auto const action_iter = actions.find({ val1, val2 });
+    auto const action = action_iter != actions.end() ? action_iter->second : default_func;
+    action();
+}
