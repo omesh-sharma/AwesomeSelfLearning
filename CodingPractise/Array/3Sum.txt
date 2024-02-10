@@ -1,0 +1,71 @@
+class Solution {
+public:
+    vector<vector<int>> threeSum(vector<int>& nums) 
+    {
+//         vector<vector<int>> res;
+//         vector<int> subRes;
+//         int sum;
+        
+//         sort(nums.begin(),nums.end());
+//         //nums.erase(unique(nums.begin(),nums.end()),nums.end());
+//         for(auto i=0;i<nums.size();i++)
+//         {
+//             for(auto j=1;j<nums.size();j++)
+//             {
+//                 for(auto k=2;k<nums.size();k++)
+//                 {
+//                    sum=nums[i]+nums[j]+nums[k]; 
+//                      if(sum==0 && i!=j && j!=k && i!=k)
+//                     {
+//                          // if(i=0)
+//                          // {
+//                          //            subRes.push_back(nums[i]);
+//                          //            subRes.push_back(nums[j]);
+//                          //            subRes.push_back(nums[k]);
+//                          //            res.push_back(subRes);
+//                          //            subRes.clear();           
+//                          // }
+//                              //for(auto g=0;g<res.size();g++)
+//                              {
+//                                // if(res[g][0]!=nums[i] && res[g][0]!=nums[j] && res[g]                                    [0]!=nums[k] && res[g][1]!=nums[i] && res[g]                                           [1]!=nums[j] && res[g][1]!=nums[k] && res[g]                                         [2]!=nums[i] && res[g][2]!=nums[j] && res[g]                                           [2]!=nums[k])
+//                                  {
+//                                     subRes.push_back(nums[i]);
+//                                     subRes.push_back(nums[j]);
+//                                     subRes.push_back(nums[k]);
+//                                     res.push_back(subRes);
+//                                     subRes.clear();           
+//                                  }
+//                              }
+//                     }
+//                 }
+//             }
+//         }
+//         return res;
+        set<vector<int> >rs;
+        sort(nums.begin(), nums.end());
+        int i, j, k;
+        int n = nums.size();
+        for (i = 0; i < n - 2; i++) {
+            j = i+1;
+            k = n-1;
+            while (j < k) {
+                int sum = nums[i] + nums[j] + nums[k];
+                if (sum == 0) {
+                    vector<int> tmp(3);
+                    tmp[0] = nums[i];
+                    tmp[1] = nums[j];
+                    tmp[2] = nums[k];
+                    rs.insert(tmp);
+                    j++;
+                    k--;
+                } else if (sum > 0) {
+                    k--;
+                } else if (sum < 0) {
+                    j++;
+                }
+            }
+        }
+        vector<vector <int> >result (rs.begin(), rs.end());
+        return result;
+    }
+};

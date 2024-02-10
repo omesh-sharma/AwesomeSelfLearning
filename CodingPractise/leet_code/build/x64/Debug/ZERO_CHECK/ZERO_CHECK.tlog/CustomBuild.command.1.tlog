@@ -1,0 +1,10 @@
+^C:\USERS\OMESH SHARMA\OMESH_BACKUP\WORKSPACE\OTHERS\PRACTISE\LEET_CODE\BUILD\CMAKEFILES\E30B9B7CF018B2F839ED9950FDDDF815\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/omesh sharma/omesh_backup/Workspace/Others/Practise/leet_code" "-BC:/Users/omesh sharma/omesh_backup/Workspace/Others/Practise/leet_code/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/omesh sharma/omesh_backup/Workspace/Others/Practise/leet_code/build/untitled.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
