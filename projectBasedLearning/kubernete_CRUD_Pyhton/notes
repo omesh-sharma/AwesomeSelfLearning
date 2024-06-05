@@ -1,0 +1,7 @@
+export http_proxy=http://www-proxy-brmdc.us.oracle.com:80/
+export https_proxy=http://www-proxy-brmdc.us.oracle.com:80/
+
+unset http_proxy
+unset https_proxy
+
+python -m pip install kubernetes

@@ -33,18 +33,18 @@ int main()
     // *********************************************
 
     struct player slave_context;
-    slave_context.length = 78;
+    //slave_context.length = 78;
     void *data_stream = (void *)-1; //(void*) &slave_context; //(void *)-1;
-
+    //data_stream = NULL;
     struct player* new_slave_context = (struct player*)data_stream;
 
     if(new_slave_context){printf("%d", new_slave_context->length);}
 
     // *********************************************
 
-    int x;
+//     int x;
 //    struct player *one = (struct player*) malloc(sizeof(struct player));
-//
+
 //    // uncomment below, it will work
 //    //one* objFinal = malloc(sizeof(one));
 //    one->length = (size_t)-1; //24;
