@@ -322,3 +322,101 @@ int main() {
     }
     return 0;
 }
+
+
+//================================
+//t handling arrays of pointers (char**) in C, where passing by reference isn't directly supported like in C++. In C, you typically pass pointers to pointers (char**) to functions to achieve similar behavior. Let's address how you can modify and delete an array of char* pointers in C:
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+// Function to modify and delete an array of char pointers using a double pointer (char**)
+void modifyAndDeleteArray(char*** data, int size) {
+    // Delete each string in the array
+    for (int i = 0; i < size; ++i) {
+        free((*data)[i]); // Free memory for each string
+        (*data)[i] = NULL; // Set pointers to NULL after deletion (optional)
+    }
+
+    // Delete the array itself
+    free(*data);
+    *data = NULL; // Set the pointer to NULL after deletion (optional)
+}
+
+int main() {
+    // Define an array of char pointers
+    const int size = 3;
+    char** data = (char**)malloc(size * sizeof(char*));
+    if (data == NULL) {
+        fprintf(stderr, "Memory allocation failed\n");
+        return 1;
+    }
+
+    // Allocate memory for each string and copy into the array
+    data[0] = (char*)malloc(6 * sizeof(char)); // Allocate memory for "Hello"
+    data[1] = (char*)malloc(6 * sizeof(char)); // Allocate memory for "World"
+    data[2] = (char*)malloc(5 * sizeof(char)); // Allocate memory for "Test"
+
+    // Copy strings into the array
+    strcpy(data[0], "Hello");
+    strcpy(data[1], "World");
+    strcpy(data[2], "Test");
+
+    // Print the original array
+    printf("Original array: ");
+    for (int i = 0; i < size; ++i) {
+        printf("%s ", data[i]);
+    }
+    printf("\n");
+
+    // Call the function to modify and delete the array
+    modifyAndDeleteArray(&data, size);
+
+    // Print the array after deletion (should not be accessed)
+    printf("Array after deletion: ");
+    for (int i = 0; i < size; ++i) {
+        // Accessing deleted memory: undefined behavior
+        printf("%s ", data[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
+
+
+//In C++, when you pass an array by reference (char* (&data)[3]), modifications made to the array inside the function will affect the original array outside the function. However, setting data to nullptr inside the function will not affect the original array outside the function. Here’s why:
+#include <iostream>
+
+// Function to modify an array of char pointers using pass by reference to array
+void modifyAndNullify(char* (&data)[3]) {
+    // Modify the first element of the array of pointers
+    data[0] = "Modified";
+
+    // Set the array to null
+    data = nullptr;  // This line will cause a compilation error
+}
+
+int main() {
+    // Define an array of char pointers
+    char* data[] = {"Hello", "World", "Test"};
+
+    // Print the original array
+    std::cout << "Original array: ";
+    for (int i = 0; i < 3; ++i) {
+        std::cout << data[i] << " ";
+    }
+    std::cout << std::endl;
+
+    // Call the function using pass by reference to array
+    modifyAndNullify(data);
+
+    // Print the array after modification and attempted nullification
+    std::cout << "Array after modification and attempted nullification: ";
+    for (int i = 0; i < 3; ++i) {
+        std::cout << data[i] << " ";
+    }
+    std::cout << std::endl;
+
+    return 0;
+}

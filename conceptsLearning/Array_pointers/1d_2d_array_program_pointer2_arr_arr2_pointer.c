@@ -14,7 +14,24 @@ int main() {
     // Define an array of pointers to int
     int* ptr[4];
 
+
+
+	// or
+
+
+	// int num1 = 10, num2 = 20, num3 = 30;
+	// int *ptr[3];  // Array of 3 pointers to integers
+
+	// ptr[0] = &num1;  // Assign the address of num1 to ptr[0]
+	// ptr[1] = &num2;  // Assign the address of num2 to ptr[1]
+	// ptr[2] = &num3;  // Assign the address of num3 to ptr[2]
+
+	// *ptr[0] = 100;  // Modify the value of num1 through ptr[0]
+	// *ptr[1] = 200;  // Modify the value of num2 through ptr[1]
+
     // Assign pointers to 2D arrays and 1D arrays to ptr
+
+	
     ptr[0] = arr2D[0];
     ptr[1] = arr2D[1];
     ptr[2] = arr2D[2];
@@ -112,6 +129,10 @@ int main()
 	int arr[] = { 3, 5, 6, 7, 9 };
 	int *p = arr;
 	int (*ptr)[5] = &arr;
+	
+	// (*ptr)[0] = 10;  // Access the first element of the array through ptr
+	// (*ptr)[1] = 20;  // Access the second element
+	// // and so on...
 	
 	printf("p = %p, ptr = %p\n", p, ptr);
 	printf("*p = %d, *ptr = %p\n", *p, *ptr);
