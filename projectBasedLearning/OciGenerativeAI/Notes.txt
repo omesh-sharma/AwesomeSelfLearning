@@ -1,0 +1,35 @@
+Login 
+official email 
+pwd : saurav1@3S
+
+# Login url : https://cloud.oracle.com/identity/domains/my-profile/api-keys?region=ap-mumbai-1
+
+
+
+How to setup Gen Ai :
+https://www.linkedin.com/pulse/how-work-langchain-oracle-generative-ai-madhusudhan-rao-8efgf
+
+Download the OCI cli for the windows :
+https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/cliinstall.htm
+Try downlaod windows seever installer
+
+
+
+https://www.linkedin.com/pulse/how-work-langchain-oracle-generative-ai-madhusudhan-rao-8efgf
+https://blogs.oracle.com/ai-and-datascience/post/developing-ai-apps-oci-generative-ai-langchain
+https://blogs.oracle.com/ai-and-datascience/post/ai-quick-actions-in-oci-data-science
+https://github.com/oracle-devrel/oci-genai-finetuning
+https://www.oracle.com/in/artificial-intelligence/fine-tune-llms/
+https://luca-bindi.medium.com/oracle23ai-simplifies-rag-implementation-for-enterprise-llm-interaction-in-enterprise-solutions-d865dacdd1ed
+
+https://github.com/jin38324/OCI_GenAI_access_gateway | jin38324/OCI_GenAI_access_gateway: OCI Generative AI services compatible with the OpenAI API
+https://docs.public.oneportal.content.oci.oraclecloud.com/en-us/iaas/Content/generative-ai/iam-policies.htm | Getting Access to Generative AI
+https://www.oracle.com/in/artificial-intelligence/web-summarization-with-gen-ai/ | Web Content Summarization with Generative AI | Oracle India
+https://github.com/oracle-devrel/oci-content-summary | oracle-devrel/oci-content-summary: Extract and summarize web content using OCI Generative AI for quick analysis and comprehension.
+https://www.linkedin.com/pulse/how-work-langchain-oracle-generative-ai-madhusudhan-rao-8efgf | How to work with LangChain and Oracle Generative AI
+https://blogs.oracle.com/ai-and-datascience/post/how-to-build-a-rag-solution-using-oci-generative-ai | How to build a RAG solution using OCI Generative AI
+https://brendg.co.uk/2024/06/25/calling-the-oracle-generative-ai-service-with-python-%F0%9F%90%8D/ | Calling the Oracle Generative AI Service with Python 🐍 – Brendan's Tech Ramblings
+https://techtrantor.com/oci-generative-ai-with-python-sdk/ | OCI Generative AI with Python SDK – Tech Trantor
+https://github.com/oracle-samples/oci-data-science-ai-samples/tree/main | oracle-samples/oci-data-science-ai-samples: This repo contains a series of tutorials and code examples highlighting different features of the OCI Data Science and AI services, along with a release vehicle for experimental programs.
+https://python.langchain.com/v0.2/docs/integrations/text_embedding/oci_generative_ai/ | Oracle Cloud Infrastructure Generative AI | 🦜️🔗 LangChain
+https://www.google.com/search?q=Oracle+Generative+AI+Pyhotn+example&sca_esv=ae20d3a8f5e5385f&sca_upv=1&rlz=1C1CHBD_enIN1010IN1010&sxsrf=ADLYWIJG7HioND5eTbYvhg8KK3Z8HufSuw%3A1723610469870&ei=ZTW8ZrPqNMKVseMPyYzXuQs&ved=0ahUKEwjzsKau1fOHAxXCSmwGHUnGNbcQ4dUDCA8&uact=5&oq=Oracle+Generative+AI+Pyhotn+example&gs_lp=Egxnd3Mtd2l6LXNlcnAiI09yYWNsZSBHZW5lcmF0aXZlIEFJIFB5aG90biBleGFtcGxlMgcQIRigARgKMgcQIRigARgKSIkYUIIKWNUVcAF4AJABAJgB5QOgAYAbqgEJMC4xLjYuMC40uAEDyAEA-AEBmAIMoAKkG8ICCxAAGIAEGLADGKIEwgIFECEYnwXCAgQQIRgVmAMAiAYBkAYEkgcJMS4xLjYuMC40oAfEMg&sclient=gws-wiz-serp | Oracle Generative AI Pyhotn example - Google Search

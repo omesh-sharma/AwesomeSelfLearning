@@ -1,3 +1,5 @@
+// Here the only difference infuncti(data* input) and passed to reference as &source or normal source is witgout & changes made to input won't reflect outside but in case of & it does
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -80,7 +82,7 @@ struct MainStruct {
 
 // Function to copy a structure to another (without sub-structure)
 void copyStructWithoutSub(struct MainStruct source, struct MainStruct *destination) {
-    *destination = source; // Copy the entire structure from source to destination
+    destination->mainValue = source.mainValue;
 }
 
 // Function to copy a structure to another (with sub-structure)
@@ -136,6 +138,17 @@ int main() {
     return 0;
 }
 
+
+
+
+// /Correct! Changes made to struct1 after copying to struct2 will not reflect in struct2.
+
+// When you copy the structure using:
+
+// c
+// Copy code
+// *destination = *source;
+// it performs a deep copy of the values from struct1 to struct2. This means that struct2 gets its own copy of the data contained in struct1. Therefore, after the copy operation, modifying struct1 will not affect struct2.
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -208,6 +221,172 @@ int main() {
     printf("struct2->subStruct.subValue: %d\n", struct2->subStruct.subValue); // Output: struct2->subStruct.subValue: 700
 
     // Free allocated memory
+    free(struct1);
+    free(struct2);
+
+    return 0;
+}
+
+
+// Special case when member of structure have pointer to heap memory then *dst = *src wont work
+No, *(*destination) = *(*source); will not perform a deep copy when dealing with structures that contain pointers. It performs a shallow copy, just like *dest = *src; or memcpy.
+
+Why It’s a Shallow Copy
+Pointer Copying: When you use the statement *(*destination) = *(*source);, it copies all the members of the structure from source to destination, including any pointer members. However, it only copies the values of those pointers (the addresses), not the actual data they point to.
+
+Shared Data: After this assignment, both source and destination will point to the same memory locations for any pointer members. If you modify the data pointed to by one structure, it will affect the other structure.
+
+Example Illustration
+Here’s a quick example to demonstrate:
+
+c
+Copy code
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+struct Data {
+    int value;
+    char *text; // Pointer to a string
+};
+
+int main() {
+    struct Data *original = malloc(sizeof(struct Data));
+    original->value = 42;
+    original->text = malloc(20);
+    strcpy(original->text, "Hello");
+
+    struct Data *copy = malloc(sizeof(struct Data)); // Allocate memory for copy
+    *copy = *original; // Shallow copy (not deep copy)
+
+    // Modify original
+    strcpy(original->text, "Goodbye");
+
+    // Print both
+    printf("Original: %d, %s\n", original->value, original->text); // Goodbye
+    printf("Copy: %d, %s\n", copy->value, copy->text); // Goodbye (not Hello!)
+
+    // Free allocated memory
+    free(original->text);
+    free(original);
+    free(copy->text); // This will be a problem since copy.text points to the same memory
+    free(copy); // Don't forget to free the copy itself
+
+    return 0;
+}
+To Perform a Deep Copy
+To ensure a true deep copy, you need to:
+
+Allocate new memory for destination.
+Copy each member individually, especially for any pointers.
+Example of Deep Copy Function
+c
+Copy code
+void deepCopy(struct Data **source, struct Data **destination) {
+    *destination = malloc(sizeof(struct Data));
+    if (*destination == NULL) {
+        return; // Handle memory allocation failure
+    }
+    (*destination)->value = (*source)->value;
+    
+    // Allocate new memory for the text and copy
+    (*destination)->text = malloc(strlen((*source)->text) + 1);
+    if ((*destination)->text != NULL) {
+        strcpy((*destination)->text, (*source)->text);
+    }
+}
+Summary
+*(*destination) = *(*source); will not perform a deep copy; it creates a shallow copy.
+For deep copying, you must manually allocate memory for each pointer and copy the actual data they point to.
+
+
+
+Explanation
+What Happens: When you use *(*destination) = *(*source);, you're effectively copying all the members of the structure from source to destination. This includes:
+
+Primitive types (like integers).
+Pointers, which are just memory addresses.
+Shallow Copy:
+
+If the structure has a pointer (like char *text), both the original and the copy will end up pointing to the same memory location.
+Thus, any modification to the data through one structure will reflect in the other, because they share the same address.
+
+
+The distinction lies in the type of data contained in your structures versus typical cases involving pointers. Let's clarify:
+
+Your Case: Value Types
+Structure Composition:
+
+In your code, both MainStruct and SubStruct consist entirely of value types (integers):
+c
+Copy code
+struct SubStruct {
+    int subValue; // Value type
+};
+
+struct MainStruct {
+    struct SubStruct subStruct; // Contains another value type
+    int mainValue; // Value type
+};
+Copying Behavior:
+
+When you use *destination = *source;, it performs a complete copy of the structure's values, including nested structures. Since these are value types, changes to the source after copying do not affect the destination:
+This results in independent copies after the assignment.
+Typical Case: Pointer Types
+Pointers in Structures:
+
+If your structures had pointer members (e.g., char *text;), copying with *destination = *source; would only copy the pointers, leading to both structures pointing to the same memory location. This results in shared data:
+Example with pointers:
+c
+Copy code
+struct Data {
+    int value;
+    char *text; // Pointer
+};
+Deep Copy Requirement:
+
+In cases where structures contain pointers, you must allocate new memory for the destination and copy the actual data to ensure both structures maintain independent states.
+Summary
+Your Case:
+Using *destination = *source; creates a deep copy effect because you’re dealing with value types. Each structure has its own copy of the data.
+Typical Pointer Case:
+Requires explicit deep copying techniques to allocate memory and copy data to avoid shared state.
+Conclusion
+In your case, the structure's composition allows for straightforward copying without worrying about shared pointers, hence you experience the effect of a deep copy. If you switch to using pointers in your structures, you would need to implement deep copy logic explicitly.
+
+
+
+
+
+
+
+// Another :
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct {
+    int mainValue;
+    int subValue;
+} MainStruct;
+
+int main() {
+    MainStruct *struct1 = malloc(sizeof(MainStruct));
+    MainStruct *struct2 = malloc(sizeof(MainStruct));
+
+    struct1->mainValue = 100;
+    struct1->subValue = 200;
+
+    // Copy struct1 to struct2
+    *struct2 = *struct1;
+
+    // Modify struct1
+    struct1->mainValue = 500;
+    struct1->subValue = 700;
+
+    // Print both structs
+    printf("struct1: mainValue = %d, subValue = %d\n", struct1->mainValue, struct1->subValue); // Outputs: 500, 700
+    printf("struct2: mainValue = %d, subValue = %d\n", struct2->mainValue, struct2->subValue); // Outputs: 100, 200
+
     free(struct1);
     free(struct2);
 

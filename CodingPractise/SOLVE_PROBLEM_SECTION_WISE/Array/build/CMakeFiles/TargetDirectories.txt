@@ -1,3 +1,0 @@
-C:/Users/omesh sharma/omesh_backup/Workspace/Others/Practise/leet_code/build/CMakeFiles/untitled.dir
-C:/Users/omesh sharma/omesh_backup/Workspace/Others/Practise/leet_code/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/omesh sharma/omesh_backup/Workspace/Others/Practise/leet_code/build/CMakeFiles/ZERO_CHECK.dir

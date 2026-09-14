@@ -1,0 +1,84 @@
+Hi VKS,
+
+Candidate Interview Feedback for Java Primary  (Anusha S):
+Duration: 1 hour 8 minutes
+
+Topics Covered:
+Project-based questions: REST, HTTP , REST methods
+Operating system concepts: multiprocessing, , Memory management, signals , stak , heap
+Threading and locks: threading and locking 
+Programming concepts : Lowlevel concepts like final , finally finalize, how "new" keyword work, opps conceps, design patttern
+Troubleshooting with scenarios and Linux commands provided moderate answers. : how to locate files, on which protocl soket works, how to debug java program , jar file inspection or extraction , access specifier
+Database query: one query to select by sorting
+Design patterns: 
+Binary search program
+C++ program output MCQ:
+CI/CD flow , docker - difference in image and container
+
+
+
+============================
+
+Topics Covered:
+
+Project-based: Basic understanding of REST methods, confusion between REST and HTTP.
+Operating System: Familiar with multiprocessing, but don't know much of paging/segmentation, signals, stack, and heap.
+Threading and Locks: Understood.
+Programming Concepts:
+Understood final, finally, finalize. Lacked knowledge of how the new keyword works.
+OOP: Encapsulation understanding needs improvement.
+Familiar with design patterns and abstract classes.
+Troubleshooting: Limited understanding of basic file location, socket protocols, Java debugging, and JAR manipulation. Understood access specifiers.
+Database: Able to write a basic select query with sorting.
+Binary Search: Write working code.
+OOP/Abstraction MCQ: Partially answered (1 out of 2 correct).
+CI/CD & Docker: Understood the concepts.
+
+==========================
+Java rating - 7
+OS - 7
+Database - 8
+
+REST methods
+
+Mult processin , multi threading , and async
+()
+
+Thed prgram failes
+
+
+
+https://www.geeksforgeeks.org/quizzes/java-quiz/inheritance-2-gq/
+
+https://www.geeksforgeeks.org/quizzes/java-quiz/abstract-class-and-interface-in-java-gq/
+not ansser
+
+
+Fina finally finalize, finally in java 
+
+
+Db query
+
+REST vs HTTP
+
+Stack and heap
+
+heap and stack , pagin and segmentation
+
+own keyword like new, 
+
+signal thread
+ctrl c
+
+troubelshoot : tcp , how to debug program , jar see classes (partial answer)
+
+CI/CD
+
+Docer crate image and all
+How find the file from terminal, rm command
+
+
+opps concept, accep specifer
+
+
+Feedback : 

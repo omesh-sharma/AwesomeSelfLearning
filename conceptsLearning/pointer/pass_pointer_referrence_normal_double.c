@@ -117,6 +117,9 @@ int main() {
 
 void updatePtr(int **ptr) {
     *ptr = malloc(sizeof(int)); // Modify the value of ptr itself
+
+    //OR
+    **ptr = 42;
 }
 
 int *ptr; // Declare ptr in global scope
@@ -264,6 +267,96 @@ int main() {
 
 
 
+            // In C, you can pass a pointer to a struct (e.g., struct Student *student) using &students, but you cannot pass int *ptr as &ptr in the same way. Let's break down the underlying differences between these two scenarios and why this is happening.
+
+            // Key Concepts:
+            // Passing a Pointer to a Struct:
+            // When you pass a pointer to a struct (e.g., struct Student *student), you are passing the address of a struct instance, which means you can directly access the members of that struct using the pointer.
+
+            // In the case of &students (assuming students is a struct object), you are actually passing the address of the struct variable, which is fine because structs in C are typically passed by reference or as a pointer to their address. This is common in C when you want to pass large data structures (like a struct) to a function.
+
+            // Pointer to a Pointer:
+            // When you do &ptr (where ptr is a pointer to a variable), you are actually passing a pointer to a pointer, i.e., int**. This is different from passing the address of a struct, because ptr is already a pointer, and when you try to pass &ptr, you're passing the address of the pointer variable, not the address of the value that it points to.
+
+            // To clarify:
+
+            // int* ptr: This is a pointer to an integer.
+            // &ptr: This is a pointer to the pointer, i.e., int**.
+            // The issue arises because, in most cases, when we pass int *ptr, we want to pass the address of the value that ptr points to, not the address of the pointer variable itself. The dereferencing operator (*ptr) is used to access the value ptr points to.
+
+            // Why you can pass &students (a struct) but not &ptr (an integer pointer):
+            // Passing &students (a struct): When you have something like:
+
+            // c
+            // Copy code
+            // struct Student {
+            //     int id;
+            //     char name[50];
+            // };
+
+            // struct Student students;
+            // // Fill the struct with values
+
+            // void func(struct Student *student) {
+            //     // Access student->id and student->name
+            // }
+
+            // func(&students);  // Pass the address of the struct variable
+            // Here, you're passing the address of the students struct, which is perfectly valid. &students is an address of the struct variable.
+
+            // Passing &ptr (a pointer to an integer): If you have:
+
+            // c
+            // Copy code
+            // int* ptr;
+            // void func(int* ptr) {
+            //     // Access the integer value ptr points to
+            // }
+
+            // func(&ptr);  // Error: passing pointer to pointer (int**), not the value it points to
+            // Here, &ptr is actually passing a pointer to the pointer (int**), which is usually not what you want when you expect to manipulate the value ptr points to. In most cases, you want to pass the pointer itself (i.e., int* ptr), not the address of the pointer (int** ptr).
+
+            // When you do &ptr, you're passing the memory address of the pointer variable (ptr), which is an entirely different concept from passing the address of the integer variable that ptr points to.
+
+            // Correct Usage for Pointer-to-Value:
+            // If you want to pass a pointer (e.g., int* ptr) to a function, you can do so directly by passing ptr:
+
+            // c
+            // Copy code
+            // #include <stdio.h>
+
+            // void modifyValue(int* ptr) {
+            //     *ptr = 20;  // Modify the value at the memory location ptr points to
+            // }
+
+            // int main() {
+            //     int value = 10;
+            //     int* ptr = &value;
+
+            //     printf("Before modifyValue: %d\n", value);  // Output: 10
+
+            //     modifyValue(ptr);  // Pass the pointer to the function
+
+            //     printf("After modifyValue: %d\n", value);  // Output: 20
+
+            //     return 0;
+            // }
+            // In this example:
+
+            // ptr holds the address of value.
+            // The modifyValue function takes the pointer int* ptr and modifies the value at that address.
+            // No need to use &ptr, because you're interested in passing the address stored in ptr (which is the address of value).
+            // Why &ptr is incorrect in this context:
+            // When you write &ptr, you're passing a pointer to a pointer (int**), not the value that ptr points to.
+            // This is only useful when you explicitly want to manipulate the pointer itself (i.e., change what address it holds) and need a pointer to the pointer.
+            // Summary:
+            // For structs: You typically pass a pointer to the struct, like &students, because you're interested in the address of the struct.
+            // For basic types like int: You pass the pointer (int* ptr) directly, not the address of the pointer (&ptr). Using &ptr gives you a pointer to the pointer (int**), which is usually not what you want unless you specifically need to modify the pointer itself.
+
+
+
+
+
 
 
 
@@ -295,6 +388,7 @@ void updatePtr(int *ptr) {
 // }
 
 //or 
+// ONLY IN C++++ it is possible not in C
 // void allocate(int*& ptr) {
 //     *ptr = malloc(sizeof(int)); // Modifies the original ptr in main
 // }
